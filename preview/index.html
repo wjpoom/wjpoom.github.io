@@ -1,30 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Advanced Version of SPEC Dataset</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <!-- <meta name="description"
+    content="We reveal that certain directions in CLIP text embeddings permit detailed attribute control in text-to-image models.">
+  <meta property="og:title" content="A More Advanced Version of SPEC Dataset" />
+  <meta property="og:description"
+    content="We reveal that certain directions in CLIP text embeddings permit detailed attribute control in text-to-image models." />
+  <meta property="og:url" content="https://compvis.github.io/attribute-control" /> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="/attribute-control/static/images/teaser.jpg" /> -->
+  <!-- <meta property="og:image:width" content="1200"/> -->
+  <!-- <meta property="og:image:height" content="630"/> -->
+  <!-- <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" /> -->
+
+
+
+  <!-- <meta name="twitter:title" content="A More Advanced Version of SPEC Dataset">
+  <meta name="twitter:description"
+    content="We reveal that certain directions in CLIP text embeddings permit detailed attribute control in text-to-image models."> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="/attribute-control/static/images/teaser.jpg">
+  <meta name="twitter:card"
+    content="We reveal that certain directions in CLIP text embeddings permit detailed attribute control in text-to-image models."> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="diffusion,fine-grained,vision-language-model,multimodal">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>A More Advanced Version of SPEC Dataset</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome!</h1>
-    </header>
 
-    <main>
-        <section>
-            <h2>About</h2>
-            <p>This is a simple static website created with GitHub Pages.</p>
-        </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p>Email: wjpeng22@m.fudan.edu.cn</p>
-        </section>
-    </main>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">A More Advanced Version of SPEC Dataset</h1>
 
-    <footer>
-        <p>&copy; 2024 SPEC. All rights reserved.</p>
-    </footer>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2312.00081.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/wjpoom/SPEC" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2312.00081" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Page introudction -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title" style="text-align: center;">Introduction</h2>
+        <h2 class="subtitle pt-4">
+          We are building a new version of SPEC dataset with a larger data scale, more object categories, and higher-quality images and text, etc.
+          Here we provide a demo at this website, and the full version will come soon, please keep watch our <a href="https://github.com/wjpoom/SPEC"
+          target="_blank">github project</a>.</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End page introudction -->
+
+  <!-- Absolute Size Image carousel -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title" style="text-align: center;">Absolute Size</h2>
+        <div class="">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/1.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/2.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/3.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/4.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/5.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/6.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/7.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/absolute_size/8.png" alt="MY ALT TEXT" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+  <!-- Relative Size Image carousel -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title" style="text-align: center;">Relative Size</h2>
+        <div class="">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/1.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/2.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/3.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/4.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/5.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/6.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/7.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/8.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/9.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/10.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/11.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_size/12.png" alt="MY ALT TEXT" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+  <!-- Relative Spatial Image carousel -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title" style="text-align: center;">Relative Spatial</h2>
+        <div class="">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/1.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/2.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/3.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/4.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/5.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/6.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/7.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/8.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/9.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/10.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/11.png" alt="MY ALT TEXT" />
+            </div>
+            <div class="item">
+              <!-- Your image here -->
+              <img src="static/images/relative_spatial/12.png" alt="MY ALT TEXT" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://compvis.github.io/attribute-control/"
+                target="_blank">Attribute Control</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
