@@ -540,33 +540,16 @@
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
-            <p style="text-align:center">
+            <!-- <p style="text-align:center">
               <span class="visit-badge-label">Page Views:</span>
               <span id="visitCount" class="visit-badge-count">0</span>
-            </p>
+            </p> -->
 
           </div>
         </div>
       </div>
     </div>
   </footer>
-
-
-  <!-- JavaScript to update visit count -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // Send a custom event to Google Analytics to get the page views
-      gtag('event', 'page_view', {
-        'event_callback': function() {
-          // Get the visit count from Google Analytics data layer
-          var visitCount = window.dataLayer[1][1].metrics["0"].values["0"];
-          // Update the visit count display on the page
-          document.getElementById('visitCount').innerText = visitCount;
-        }
-      });
-    });
-  </script>
-
 </body>
 
 </html>
