@@ -24,17 +24,17 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSPYER20JM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YSPYER20JM');
+  </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YSPYER20JM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-YSPYER20JM');
-</script>
 
 <body>
 
@@ -533,13 +533,16 @@
           <div class="content">
 
             <p>
-              This page was built using the <a href="https://compvis.github.io/attribute-control/"
-                target="_blank">Attribute Control</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the of this website, we just ask that you link back to this page in the footer.
+              This page was built upon <a href="https://compvis.github.io/attribute-control/"
+                target="_blank">this project</a>.
+              Feel free to borrow the template of this website, we just ask that you link back to this page in the footer.
               <br> This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p style="text-align:center">
+              <span class="visit-badge-label">Page Views:</span>
+              <span id="visitCount" class="visit-badge-count">0</span>
             </p>
 
           </div>
@@ -547,6 +550,22 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- JavaScript to update visit count -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Send a custom event to Google Analytics to get the page views
+      gtag('event', 'page_view', {
+        'event_callback': function() {
+          // Get the visit count from Google Analytics data layer
+          var visitCount = window.dataLayer[1][1].metrics["0"].values["0"];
+          // Update the visit count display on the page
+          document.getElementById('visitCount').innerText = visitCount;
+        }
+      });
+    });
+  </script>
 
 </body>
 
